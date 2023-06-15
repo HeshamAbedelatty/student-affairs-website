@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% load static %}
+<link rel="icon" type="image/png" href="{% static 'images/icons/logo.ico' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/login/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/login/util.css' %}">
+<link rel="stylesheet" href="{% static 'styles/CSSstyle_login.css' %}">
+<link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'styles/CSSstyle_welcome.css' %}">
+ <title>Welcome</title>
+
+</head>
+<body class="bg-info">
+<center>
+    <h1 class="p-4 fs-1 fw-bold">Welcome To Web Projects</h1>
+</center>
+<div class="container" >
+    <div class="row">
+        <div class="card w-25">
+            <img src="{% static 'images/hr.jpg' %}" height="255" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Human Resources</h1>
+                <div class="btn btn-primary">Open Project</div>
+            </div>
+        </div>
+        <div class="card w-25">
+            <img src="{% static 'images/ss.png' %}" height="255" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Student Affairs</h1>
+               <a href="{% url 'loginpagepath' %}"><div class="btn btn-primary">Open Project</div></a>
+            </div>
+        </div>
+        <div class="card w-25">
+            <img src="{% static 'images/hh.jfif' %}" height="255" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Higher studies</h1>
+
+                <div class="btn btn-primary">Open Project</div>
+            </div>
+        </div>
+        <div class="card w-25">
+            <img src="{% static 'images/lab.jfif' %}" height="255" class="card-img-top" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Laboratory tracking</h1>
+
+                <div class="btn btn-primary">Open Project</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

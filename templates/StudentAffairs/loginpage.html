@@ -1,0 +1,69 @@
+
+{% load static %}
+
+{% block content %}
+
+<head>
+	<title>Login</title>
+	<link rel="icon" type="image/png" href="{% static 'images/icons/logo.ico' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/login/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/login/util.css' %}">
+	<link rel="stylesheet" href="{% static 'styles/CSSstyle_login.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/CSSstyle_login.css' %}"/>
+</head>
+
+<body>
+	<div class="limiter">
+		
+		<div class="container-login100">
+			{% include 'messages.html' %}
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url({% static 'images/bg-01.jpg' %});">
+					<span class="login100-form-title-1">
+						Sign In
+					</span>
+				</div>
+
+				<form class="login100-form" method="POST">
+					{% csrf_token %}
+					<div class="wrap-input100 m-b-26">
+						<span class="label-input100">Username</span>
+						<input class="input100" type="text" id="inputuser" name="username" required placeholder="Enter username">
+
+					</div>
+
+					<div class="wrap-input100 m-b-18">
+						<span class="label-input100">Password</span>
+						<input class="input100" type="password" id="inputpass" name="pass" required placeholder="Enter password">
+
+					</div>
+					<div class="flex-sb-m w-full p-b-30">
+						<div class="txt2"><a href="{% url 'registerpagepath' %}">Signup From here</a></div>
+						<a href="{% url 'forgetpasswordpagepath' %}" class="txt1">
+							Forget Password?
+						</a>
+					</div>
+					<div class="container-login100-form-btn">
+						<button id="loginbutt" type="submit" class="login100-form-btn">
+							Login
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>
+{% endblock content %}
