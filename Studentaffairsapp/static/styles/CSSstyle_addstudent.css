@@ -1,0 +1,32 @@
+#goout{
+    background-color:red;
+   
+        cursor: pointer;
+      
+
+}
+#goout:hover {
+    background-color: #333333;
+  }
+  .login100-form-btn{
+    cursor: pointer;
+
+  }
+
+  #welcomewelcome{
+    background-color: rgba(54,84,99,0.7);
+  }
+ 
+  #navitemswhite{
+      color:#fff;
+  }
+ #navitemswhite:hover{
+     color: green;
+ }
+ .gege{
+    width: 100%;
+    position: relative;
+    border-bottom: 0px;
+
+ }
+ 

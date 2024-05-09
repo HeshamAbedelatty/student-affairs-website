@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="{% static 'styles/CSSstyle_search.css' %}">
+  
+</head>
+
+<body>
+    <div class="container-login100 ">
+        {% include 'messages.html' %}
+        <div class="wrap-login100 m-b-100">
+            <div class="login100-form-title">
+                <span class="login100-form-title-1">
+                    Search
+                </span>
+            </div>
+
+            <form class="login100-form" method="GET" action='searchdown' >
+                {% csrf_token %}
+
+                <div class="wrap-input100 m-b-26">
+                    <span class="label-input100">Student's ID or Name</span>
+                    <input class="input100" type="text" name='studd' id="nameee" required
+                        placeholder="Enter student's name or id">
+
+                </div>
+
+
+                <div class="flex-sb-m w-full p-b-30">
+
+                    <input class="input-checkbox100" id="ratio1" type="radio" name="stat"
+                        value="Active">
+                    <label class="label-checkbox100" for="ratio1">
+                        Active
+                    </label>
+
+
+                    <input class="input-checkbox100" id="ratio2" type="radio" name="stat"
+                        value="Inactive">
+                    <label class="label-checkbox100" for="ratio2">
+                        Inactive
+                    </label>
+
+
+                    <input class="input-checkbox100" id="ratio3" type="radio" name="stat" value="All">
+                    <label class="label-checkbox100" for="ratio3">
+                        All
+                    </label>
+
+                </div>
+
+                <div class="container-login100-form-btn ">
+                    <button class="login100-form-btn m-t-40" id="buttsearch"   type='submit'>
+                        Search
+                    </button>
+                </div> 
+
+          
+            </form>
+        </div>
+
+    </div>
+    
+
+
+
+
+
+
+
+    
+
+
+    
+
+</body>
+
+</html>
+{% endblock content %}

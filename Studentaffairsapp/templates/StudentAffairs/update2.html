@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>update Student</title>
+    <link rel="stylesheet" href="styles/CSSstyle_departmentassign.css">
+    <link rel="stylesheet" href="{% static 'styles/CSSstyle_search.css' %}">
+    <link rel="stylesheet" href="styles/CSSstyle_profile.css">
+        <link rel="stylesheet" href="styles/CSSstyle_update2.css">
+        <link rel="stylesheet" href="{% static 'styles/CSSstyle_addstudent.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/login/util.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/CSSstyle_login.css' %}">
+      
+    </head>
+<body>
+    <div class="limiter">
+
+
+
+        <div class="container-login100">
+            {% include 'messages.html' %}
+            <div class="wrap-login100">
+                <div class="login100-form-title">
+                    <span class="login100-form-title-1">
+                        Update  Student's  data
+                    </span>
+                </div>
+                
+                <form class="login100-form" method="GET" action='studupdate'>
+                    {% csrf_token %}
+
+
+                    <div class="wrap-input100 m-b-26">
+                        <span class="label-input100">ID</span>
+                        <input class="input100" name='studentid'readonly value='{{id}}'  type="number" id="id1" required>
+                    </div>
+
+                    <div class="wrap-input100 m-b-26">
+                        <span class="label-input100">Name</span>
+                        <input class="input100" name='studentname' value='{{name}}' id="name1" type="text" required>
+                    </div>
+
+                    <div class="wrap-input100 m-b-26">
+                        <span class="label-input100">Birth Date</span>
+                        <input class="input100" name='studentdateofbirth' value='{{dateofbirth}}' id="dob1"  type="text"
+                            required>
+                    </div>
+
+                    <div class="wrap-input100 m-b-26">
+                        <span class="label-input100">National Number</span>
+                        <input class="input100" value='{{nationalnum}}' name='studentnationalnum' id="nationaln" 
+                            maxlength="14" type="number" required>
+                    </div>
+                    <div class="wrap-input100 m-b-26">
+                        <span class="label-input100">GPA</span>
+                        <input class="input100" id="gpa1" value='{{gpa}}' name='studentgpa'  type="number" step="0.01"
+                            max="4.00" min="0.00" required>
+
+                    </div>
+
+                    <div class="gege m-b-26">
+                        <span class="label-input100">Gender</span>
+                        <div class="flex-sb-m w-50  m-t-15">
+                            <input class="gender input-checkbox100" {% if gender == "Male" %}checked="checked"{% endif %}  type="radio" name="gender" id="radio1" value="Male">
+                            <label class="label-checkbox100"  for="radio1">
+                                Male
+                            </label>
+
+                            <input id="radio2" class="gender input-checkbox100" {% if gender == "Female" %}checked="checked"{% endif %} type="radio" name="gender"
+                                value="Female">
+                            <label class="label-checkbox100" for="radio2">
+                                Female
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="gege m-b-26">
+                        <span class="label-input100">Level</span>
+                        <div class="flex-sb-m w-100  m-t-15">
+
+                            <input {% if level == "1" %}checked="checked"{% endif %} class="level input-checkbox100" type="radio" name="level" value="1" id="lev1">
+                            <label class="label-checkbox100" for="lev1">
+                                1st Level
+                            </label>
+
+                            <input {% if level == "2" %}checked="checked"{% endif %} class="level input-checkbox100" type="radio" name="level" value="2" id="lev2">
+                            <label class="label-checkbox100" for="lev2">
+                                2nd Level
+                            </label>
+
+                            <input {% if level == "3" %}checked="checked"{% endif %} class="level input-checkbox100" type="radio" name="level" value="3" id="lev3">
+                            <label class="label-checkbox100" for="lev3">
+                                3rd Level
+                            </label>
+
+                            <input {% if level == "4" %}checked="checked"{% endif %} class="level input-checkbox100" type="radio" name="level" value="4" id="lev4">
+                            <label class="label-checkbox100" for="lev4">
+                                4th Level
+                            </label>
+
+
+                        </div>
+                    </div>
+
+                    <div class="gege m-b-26">
+                        <span class="label-input100">Status</span>
+                        <div class="flex-sb-m w-50  m-t-15">
+
+                            <input {% if status == "Active" %}checked="checked"{% endif %} id="act" class="status input-checkbox100" type="radio" name="status" value="Active">
+                            <label class="label-checkbox100" for="act">
+                                Active
+                            </label>
+
+                            <input {% if status == "Inactive" %}checked="checked"{% endif %} id="inact" class="status input-checkbox100" type="radio" name="status"
+                                value="Inactive">
+                            <label class="label-checkbox100" for="inact">
+                                Inactive
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="wrap-input100 m-b-26">
+                        <span class="label-input100">Department</span>
+                        <input class="input100 department" value='{{department}}' id="DEPT" name='studentdepartment'  type="text"
+                            readonly>
+
+                    </div>
+
+
+                    <div class="wrap-input100 m-b-26">
+                        <span class="label-input100">Email</span>
+                        <input class="input100" value='{{email}}' id="EMAIL1" name='studentemail' type="email" required>
+                    </div>
+
+
+                    <div class="wrap-input100 m-b-26">
+                        <span class="label-input100">Phone</span>
+                        <input id="PHONE1" value='{{phone}}'  class="input100" name='studentphone'  type="number" required
+                            maxlength="15">
+                    </div>
+                    
+                    <button class="login100-form-btn" id="savebutt"    type='submit'>
+                        Update Data
+                    </button>
+                
+                        <a href="http://127.0.0.1:8000/delstud/{{id}}/">
+                        <div class="login100-form-btn goout"  id="deletebutt">
+                            Delete Student
+                        </div>
+                        </a>
+
+                        
+                    
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+  </body>
+</html>
+
+{% endblock content %}

@@ -1,0 +1,60 @@
+.goout {
+    background-color: red;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px;
+    border-radius: 25px;
+    font-family: Poppins-Regular;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.goout:hover {
+    background-color: #333333;
+}
+
+.login100-form-btn {
+    height: 30px;
+    cursor: pointer;
+}
+
+#welcomewelcome {
+    background-color: rgba(54, 84, 99, 0.7);
+}
+
+#navitemswhite {
+    color: #fff;
+}
+
+#navitemswhite:hover {
+    color: green;
+}
+
+#activelist {
+    margin-top: 20px;
+}
+
+#myheader {
+    background: #6c7ae0;
+}
+
+.input-100 {
+    width: 50%;
+}
+
+.godown {
+    font-size: 20px;
+}
